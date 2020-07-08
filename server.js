@@ -5,17 +5,18 @@ let http = require("http");
 let path = require("path");
 let socketIO = require("socket.io");
 let app = express();
+let port = process.env.PORT || 8000;
 let server = http.Server(app);
 let io = socketIO(server);
-app.set("port", 5000);
+app.set("port", port);
 app.use("/static", express.static(__dirname + "/static"));
 // Routing
 app.get("/", function (request, response) {
   response.sendFile(path.join(__dirname, "index.html"));
 });
 // Starts the server.
-server.listen(5000, function () {
-  console.log("Starting server on port 5000");
+server.listen(port, function () {
+  console.log("Starting server on port " + port);
 });
 let players = {};
 let pipes = [new Pipe(500), new Pipe(900)];

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      img {
+        height: 0;
+        width: 0;
+      }
+      body {
+        overflow: hidden;
+      }
+      body {
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+      }
+    </style>
+    <meta charset="utf-8" />
+    <title>Flappy Bird</title>
+    <meta
+      name="viewport"
+      content="width=device-width, 
+    user-scalable=no, initial-scale=1, maximum-scale=1,user-scalable=0"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        background: #000;
+      }
+      canvas {
+        display: block;
+        margin: 0 auto;
+        background: #fff;
+      }
+    </style>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <img id="bird" src="static/images/flappyBird.png" />
+    <img id="background" src="static/images/background.jpg" />
+    <img id="pipe" src="static/images/pipe.png" />
+    <img id="pipe1" src="static/images/pipe1.png" />
+    <img id="front" src="static/images/front.png" />
+
+    <canvas id="game" width="500" height="750"></canvas>
+    <style>
+      #game {
+        border: 1px black solid;
+      }
+    </style>
+    <script type="module" src="static/index.js"></script>
+    
+  </body>
+</html>
